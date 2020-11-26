@@ -15,14 +15,14 @@ const chatRoutes = require("./routes/chat.routes");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-io.on("connection", (socket) => {
-  socket.on("connectnotify", (room) => {
-    socket.join(room.id);
-  });
-  socket.on("userconnect", (data) => {
-    io.in(data.id).emit("notify", data.model);
-  });
-});
+// io.on("connection", (socket) => {
+//   socket.on("connectnotify", (room) => {
+//     socket.join(room.id);
+//   });
+//   socket.on("userconnect", (data) => {
+//     io.in(data.id).emit("notify", data.model);
+//   });
+// });
 
 app.use(cors());
 
