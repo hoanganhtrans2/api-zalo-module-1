@@ -78,6 +78,7 @@ module.exports.register = (req, res) => {
           birthday: birthday,
           gender: gender,
           username: username,
+          imgurl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
         },
       };
       docClient.put(params2, function (err, data) {
